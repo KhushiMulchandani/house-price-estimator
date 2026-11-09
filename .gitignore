@@ -1,0 +1,36 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django
+db.sqlite3
+*.log
+staticfiles/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node / React
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+
+# ML artifacts (regenerate with ml_model/train.py)
+# Uncomment the next line to keep the model out of git:
+# ml_model/*.pkl
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
