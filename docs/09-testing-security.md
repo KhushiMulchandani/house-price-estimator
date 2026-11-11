@@ -34,7 +34,7 @@
 
 ### Manual end-to-end checklist
 - [ ] Backend and frontend both running, no CORS error in the browser console
-- [ ] Valid input shows a price formatted as USD
+- [ ] Valid input shows a price formatted as INR
 - [ ] Invalid input shows an error, no crash
 - [ ] Works at 360 px wide
 

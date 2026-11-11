@@ -38,7 +38,7 @@ Owner for all tasks: you (solo project).
 | 4.1 | Scaffold React app with Vite |
 | 4.2 | Build `PriceEstimatorForm` with single state object |
 | 4.3 | Add Axios client and submit handler |
-| 4.4 | Build `ResultBox` with USD formatting |
+| 4.4 | Build `ResultBox` with INR formatting |
 | 4.5 | Add loading, validation and error states |
 | 4.6 | Make layout responsive and accessible |
 

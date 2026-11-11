@@ -1,7 +1,7 @@
 # 07 · ML Dataset + Model Design
 
 ## Problem
-Regression: predict a continuous price (USD) from four features.
+Regression: predict a continuous price (INR) from four features.
 
 ## Features
 
@@ -14,18 +14,18 @@ Regression: predict a continuous price (USD) from four features.
 
 **Feature order is a contract.** The model expects `[sqft, bedrooms, age, location_rating]` in exactly this order. The backend must build the array the same way.
 
-**Target:** `price` (USD, float).
+**Target:** `price` (INR, float).
 
 ## Dataset (proposed: synthetic)
 The sklearn built-in housing data does not contain these four features, so generate data in `train.py` with a fixed seed (`random_state=42`):
 
 ```
-price = 50,000
-      + 120   * sqft
-      + 8,000 * bedrooms
-      - 1,000 * age
-      + 25,000 * location_rating
-      + Normal(0, 15,000)      # noise
+price = 5,00,000
+      + 3500   * sqft
+      + 2,50,000 * bedrooms
+      - 20,000 * age
+      + 6,00,000 * location_rating
+      + noise      # noise
 ```
 
 Row count: ~2,000. Clip prices to a positive minimum.
@@ -53,7 +53,7 @@ Alternative: use a public housing CSV and map columns to these features. If you 
 | Metric | Target |
 |---|---|
 | R² | above 0.95 on synthetic data |
-| MAE | within the noise level (about 12,000 USD) |
+| MAE | within the noise level (about 4,00,000 INR) |
 
 Record the actual results here after training.
 

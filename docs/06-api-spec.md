@@ -30,7 +30,7 @@ Headers: `Content-Type: application/json`
 ### Success: `200 OK`
 
 ```json
-{ "estimated_price": 350230.5 }
+{ "estimated_price": 8700000 }
 ```
 
 ### Validation error: `400 Bad Request`
