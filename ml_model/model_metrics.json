@@ -1,0 +1,26 @@
+{
+  "best_model": "LinearRegression",
+  "currency": "INR",
+  "features": [
+    "sqft",
+    "bedrooms",
+    "age",
+    "location_rating"
+  ],
+  "seed": 42,
+  "n_rows": 2000,
+  "test_size": 0.2,
+  "scikit_learn_version": "1.9.1",
+  "metrics": {
+    "LinearRegression": {
+      "r2": 0.9982294850403653,
+      "mae": 327650.59520673024,
+      "rmse": 413394.1705831418
+    },
+    "RandomForestRegressor": {
+      "r2": 0.9957644918370371,
+      "mae": 513559.56180341815,
+      "rmse": 639392.1638748861
+    }
+  }
+}

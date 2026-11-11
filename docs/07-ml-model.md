@@ -25,12 +25,11 @@ price = 5,00,000
       + 2,50,000 * bedrooms
       - 20,000 * age
       + 6,00,000 * location_rating
-      + noise      # noise
+      + Normal(0, 4,00,000)       # noise
 ```
 
-Row count: ~2,000. Clip prices to a positive minimum.
+Row count: ~2,000 rows, prices clipped to a minimum of ₹5,00,000, random_state=42.
 
-Alternative: use a public housing CSV and map columns to these features. If you do, document its source and licence here.
 
 ## Model candidates
 
@@ -49,13 +48,23 @@ Alternative: use a public housing CSV and map columns to these features. If you 
 5. Save the chosen model with `joblib.dump` to `house_model.pkl`.
 6. Print metrics and the scikit-learn version used.
 
-## Targets
-| Metric | Target |
-|---|---|
-| R² | above 0.95 on synthetic data |
-| MAE | within the noise level (about 4,00,000 INR) |
+## Targets and results
 
-Record the actual results here after training.
+| Metric | Target | Result (LinearRegression) | Met? |
+|---|---|---|---|
+| R² | above 0.95 | 0.9982 | Yes |
+| MAE | about ₹4,00,000 | ₹3,27,651 | Yes |
+
+### Model comparison (20% test set, 400 rows)
+
+| Model | R² | MAE (₹) | RMSE (₹) |
+|---|---|---|---|
+| **LinearRegression** (selected) | 0.9982 | 3,27,651 | 4,13,394 |
+| RandomForestRegressor | 0.9958 | 5,13,560 | 6,39,392 |
+
+**Decision:** LinearRegression is selected. It scores higher on every metric, and it is simpler and gives a smaller, faster model file. This is expected, because the synthetic prices follow a linear formula.
+
+**Reproducibility:** seed 42, scikit-learn 1.9.1. Full numbers are in `ml_model/model_metrics.json`.
 
 ## Risks and notes
 - **Version drift:** pickles can fail across scikit-learn versions. Pin the version in `requirements.txt` for both `ml_model/` and `backend/`.

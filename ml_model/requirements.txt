@@ -1,0 +1,8 @@
+# Pin EXACT versions so house_model.pkl loads reliably in the backend.
+# These are the versions this scaffold was tested with.
+# Use the same scikit-learn line in backend/requirements.txt later.
+scikit-learn==1.9.1
+numpy==2.5.3
+pandas==3.0.5
+joblib==1.6.0
+pytest==9.1.1
