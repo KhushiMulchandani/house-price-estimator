@@ -15,7 +15,7 @@ Single role: **anonymous visitor**. No login.
 | FR-3 | The API shall validate every field (type and range) before prediction. |
 | FR-4 | The API shall return `{ "estimated_price": <float> }` on success. |
 | FR-5 | The API shall return HTTP 400 with per-field error messages on invalid input. |
-| FR-6 | The UI shall display the price formatted as INR (e.g. `₹3,50,230.50`). |
+| FR-6 | The UI shall display the price formatted as INR (e.g. `₹87,00,000`). |
 | FR-7 | The UI shall show loading and error states. |
 | FR-8 | The model shall be loaded once at server startup, not per request. |
 

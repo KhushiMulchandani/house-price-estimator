@@ -35,7 +35,7 @@
 
 ## Frontend design
 - `PriceEstimatorForm`: one state object `{ sqft, bedrooms, age, location_rating }`.
-- `ResultBox`: renders when a price exists, using `toLocaleString('en-US', { style: 'currency', currency: 'USD' })`.
+- `ResultBox`: renders when a price exists, using `toLocaleString('en-IN', { style: 'currency', currency: 'INR' })`.
 - `api.js`: Axios instance with base URL from `VITE_API_URL`.
 
 ## Configuration

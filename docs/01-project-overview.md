@@ -1,7 +1,7 @@
 # 01 · Project Overview
 
 ## Summary
-The **House Price Estimator** is a single-page full-stack application. A user enters four house features and instantly receives an estimated market value in INR.
+The **House Price Estimator** is a single-page full-stack application. A user enters four house features and instantly receives an estimated market value in Indian rupees (INR).
 
 ## Purpose
 This is a warm-up project for the **BitVision** Bitcoin predictor. It practises the same pipeline on a smaller problem:
