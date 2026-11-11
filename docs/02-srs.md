@@ -15,11 +15,11 @@ Single role: **anonymous visitor**. No login.
 | FR-3 | The API shall validate every field (type and range) before prediction. |
 | FR-4 | The API shall return `{ "estimated_price": <float> }` on success. |
 | FR-5 | The API shall return HTTP 400 with per-field error messages on invalid input. |
-| FR-6 | The UI shall display the price formatted as USD (e.g. `$350,230.50`). |
+| FR-6 | The UI shall display the price formatted as INR (e.g. `₹3,50,230.50`). |
 | FR-7 | The UI shall show loading and error states. |
 | FR-8 | The model shall be loaded once at server startup, not per request. |
 
-## 4. Input rules (proposed defaults, adjust if needed)
+## 4. Input rules
 
 | Field | Key | Type | Allowed range |
 |---|---|---|---|
@@ -41,7 +41,7 @@ Strings, nulls, missing fields and out-of-range values are rejected.
 User accounts · saving estimates · maps/address lookup · real market data · production deployment
 
 ## 7. Assumptions
-- Price is in USD.
+- Price is in INR.
 - Model is trained on synthetic data, so the UI shows a disclaimer.
 
 ## 8. Acceptance criteria
