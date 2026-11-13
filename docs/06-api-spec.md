@@ -38,7 +38,9 @@ Headers: `Content-Type: application/json`
 ```json
 {
   "sqft": ["Ensure this value is greater than or equal to 300."],
-  "location_rating": ["A valid integer is required."]
+  "age":["A valid number is required."],
+  "location_rating": ["A valid integer is required."],
+  "bedrooms": ["A valid integer is required."],
 }
 ```
 

@@ -13,7 +13,7 @@
 1. User fills the form and clicks **Estimate Price**.
 2. React builds a JSON object and sends it with Axios.
 3. Django validates it with a DRF serializer.
-4. The view builds a 2D NumPy array `[[sqft, bedrooms, age, rating]]`.
+4. The view builds a 2D pandas DataFrame `[[sqft, bedrooms, age, rating]]`.
 5. The pre-loaded model returns a float.
 6. Django responds `{ "estimated_price": 350230.50 }`.
 7. React updates state and renders the formatted amount.
