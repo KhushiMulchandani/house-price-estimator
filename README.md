@@ -169,4 +169,4 @@ Short-lived feature branches, Conventional Commits, and a pull request for every
 
 ## License
 
-MIT. Add a `LICENSE` file before publishing.
+MIT.
