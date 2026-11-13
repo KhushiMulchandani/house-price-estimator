@@ -49,6 +49,9 @@ export default function App() {
       <p className="subtitle">Enter the details to get an estimated price.</p>
       <PriceEstimatorForm onSubmit={handleSubmit} loading={loading} serverErrors={serverErrors} />
       <ErrorMessage message={message} />
+      {loading && (
+      <p className="hint">The first request after a quiet period can take up to a minute while the server wakes up.</p>
+      )}
       <ResultBox price={price} />
     </main>
   );

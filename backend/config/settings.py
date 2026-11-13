@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
+from django.core.exceptions import ImproperlyConfigured
+
 from pathlib import Path
 import os
 from dotenv import load_dotenv
@@ -29,8 +31,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-insecure-key")
 DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
+if not DEBUG and SECRET_KEY == "dev-only-insecure-key":
+    raise ImproperlyConfigured("Set DJANGO_SECRET_KEY in production.")
+# ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"] + [
+       h for h in os.environ.get("ALLOWED_HOSTS", "").split(",") if h
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -131,7 +138,10 @@ MAILERS = {
     },
 }
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+# CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"] + [
+       o for o in os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",") if o
+   ]
 
 MODEL_PATH = os.environ.get(
        "MODEL_PATH", str(BASE_DIR.parent / "ml_model" / "house_model.pkl")
@@ -139,4 +149,5 @@ MODEL_PATH = os.environ.get(
 
 REST_FRAMEWORK = {
        "DEFAULT_PARSER_CLASSES": ["rest_framework.parsers.JSONParser"],
+       "DEFAULT_AUTHENTICATION_CLASSES": [],
    }
