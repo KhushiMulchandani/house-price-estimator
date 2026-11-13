@@ -169,4 +169,4 @@ Short-lived feature branches, Conventional Commits, and a pull request for every
 
 ## License
 
-MIT.
+MIT. See [LICENSE](LICENSE)
