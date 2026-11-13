@@ -17,7 +17,7 @@ A full-stack machine-learning web app: enter a house's size, bedrooms, age and l
 | ![Validation error](docs/screenshots/validation-error.png) | ![Mobile view](docs/screenshots/mobile.png) |
 
 | Backend Stopped |
-|---|---|
+|---|
 | ![Backend stopped](docs/screenshots/backend-stopped.png) |
 
 ## Features
