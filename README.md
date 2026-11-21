@@ -1,5 +1,7 @@
-# House Price Estimator
+# House Price Estimator  
+**Live demo:** [https://<your-app>.vercel.app](https://house-price-estimator-ashen.vercel.app/) (the first request may take up to a minute while the free server wakes up)
 
+---
 A full-stack machine-learning web app: enter a house's size, bedrooms, age and location rating, and get an instant price estimate in INR.
 
 **Stack:** React (Vite) · Django + Django REST Framework · scikit-learn
